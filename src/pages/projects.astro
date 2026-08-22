@@ -1,0 +1,79 @@
+---
+import Base from "@layouts/Base.astro";
+import { githubProfile, projects } from "~/data/projects";
+---
+
+<Base
+  title="Projects"
+  description="Selected coding projects by Farid Nurrahman."
+>
+  <article>
+    <header>
+      <h1>Projects</h1>
+    </header>
+    <p>
+      Several coding project that I've worked on. The full list, including
+      smaller and unfinished projects, can be found on my 
+      <a href={githubProfile} target="_blank" rel="noopener noreferrer"
+        > GitHub </a
+      >
+    </p>
+    {
+      projects.map((project) => (
+        <section>
+          <h2>{project.title}</h2>
+          {project.image && (
+            <figure>
+              <img
+                src={project.image.src}
+                alt={project.image.alt}
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="225"
+              />
+            </figure>
+          )}
+          {project.osuLink ? (
+            <p>
+              Web-based IRC client for{" "}
+              <a
+                href={project.osuLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                osu!
+              </a>{" "}
+              with refereeing features in mind. I started this project because
+              the most popular IRC client for osu! had little to no QOL features
+              for tournament refereeing, and had issues connecting to osu's
+              servers.
+            </p>
+          ) : (
+            <p>{project.description}</p>
+          )}
+          {project.children && (
+            <ul>
+              {project.children.map((child) => (
+                <li>
+                  <strong>{child.title}</strong> — {child.description}
+                  <br />
+                  <a href={child.href} target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          {project.href && (
+            <p>
+              <a href={project.href} target="_blank" rel="noopener noreferrer">
+                View Project
+              </a>
+            </p>
+          )}
+        </section>
+      ))
+    }
+  </article>
+</Base>

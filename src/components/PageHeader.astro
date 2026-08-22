@@ -1,4 +1,5 @@
 ---
+import { siteConfig } from "~/settings";
 import NavLink from "./NavLink.astro";
 ---
 
@@ -7,14 +8,13 @@ import NavLink from "./NavLink.astro";
     <ul>
       <li>
         <a href="/">
-          <strong>smallworld</strong>
+          <strong>{siteConfig.title}</strong>
         </a>
       </li>
     </ul>
     <ul>
-      <li><NavLink path="about">About</NavLink></li>
-      <li><NavLink path="blog">Blog</NavLink></li>
-      {/* Add other navbar entries here */}
+      <li><NavLink path="projects">Projects</NavLink></li>
+      <li><NavLink path="contact">Contact</NavLink></li>
     </ul>
   </nav>
 </header>
