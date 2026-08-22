@@ -25,7 +25,7 @@ export const projects: Project[] = [
       "A 2-in-1 code editor and game for UC Berkeley's Pac-Man game written in Python. Developed an inter-language extension to allow for algorithm implementation in Java via jpype.",
     href: "https://github.com/mfaridn03/Capstone-Project",
     image: {
-      src: "https://i.e-z.host/bgwd8u4d.png",
+      src: "/projects/wysp.png",
       alt: "Wysp - Capstone Group Project",
     },
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "Simple Windows desktop app to stop your computer from turning off its screen.",
     href: "https://github.com/mfaridn03/NoSleep",
     image: {
-      src: "https://i.e-z.host/rg5tyexh.png",
+      src: "/projects/nosleep.png",
       alt: "NoSleep",
     },
   },
@@ -79,7 +79,7 @@ export const projects: Project[] = [
       "A custom Discord bot for an osu! rhythm game tournament server. The bot is mainly used to track every player's top performance on maps over a time period.",
     href: "https://github.com/mfaridn03/dilf-cup-bot",
     image: {
-      src: "https://i.e-z.host/%F0%9F%93%B8/1wtmrb0t.png",
+      src: "/projects/dilf-cup-bot.png",
       alt: "Dilf Cup Discord Bot",
     },
   },
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     osuLink: "https://osu.ppy.sh/",
     href: "https://github.com/mfaridn03/Wosuric",
     image: {
-      src: "https://raw.githubusercontent.com/mfaridn03/Wosuric/refs/heads/main/docs/assets/main.png",
+      src: "/projects/wosuric.png",
       alt: "Wosuric Preview",
     },
   },
